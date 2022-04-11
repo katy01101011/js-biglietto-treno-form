@@ -8,7 +8,6 @@ getInfoBtn.addEventListener('click',
         ticketContainer.classList.add("d-block");
 
     // Prelievo input utente
-
         const passengerName = document.getElementById('passenger-name').value;
         console.log(passengerName);
 
@@ -46,17 +45,17 @@ getInfoBtn.addEventListener('click',
             cpCodeResponse.innerHTML = `${ticketCpCode}`;
 
         // Qual'è il prezzo del biglietto del treno?
-            const standardTicket = passengerDistance * 0.21;
+            let standardTicket = passengerDistance * 0.21;
             console.log(standardTicket, typeof(regularTicket));
 
-            if (userAge <= 18) {
-                ticketPrice *= 0.8;
-                console.log(ticketPrice);
-            } else if (userAge > 65) {
-                ticketPrice *= 0.6;
-                console.log(ticketPrice);
+            if (ticketType == 'minorenne') {
+                standardTicket *= 0.8;
+                console.log(standardTicket);
+            } else if (ticketType == 'over-65') {
+                standardTicket *= 0.6;
+                console.log(standardTicket);
             }
-            document.getElementById('ticket-price').innerHTML = ticketPrice.toFixed(2);
+            document.getElementById('ticket-price').innerHTML = standardTicket.toFixed(2);
     }
 );
 
