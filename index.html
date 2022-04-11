@@ -11,49 +11,96 @@
 </head>
 <body>
     <nav>
-        <div class="container">
+        <div class="container my-4">
             <h2>
                 Calcola il prezzo del tuo biglietto
             </h2>
-            <form class="container-fluid p-3">
-                <div class="row justify-content-between">
-                    <div class="col-4">
-                        <div class="box">
+            <!-- Form -->
+            <form class="container-fluid p-4 mt-4">
+                <!-- Input -->
+                <div class="row justify-content-center justify-content-md-between">
+                    <div class="col-10 col-md-4">
                         <div class="form-item text-center">
-                            <label for="user-name">Nome e Cognome</label>
-                            <input type="text" name="user-name" id="user-name">
-                        </div>
+                            <label for="passenger-name">Nome e Cognome</label>
+                            <input type="text" name="passenger-name" id="passenger-name">
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="box">
+                    <div class="col-10 col-md-4">
                         <div class="form-item text-center">
-                            <label for="user-distance">Km da percorrere</label>
-                            <input type="text" name="user-distance" id="user-distance">    
-                        </div>
+                            <label for="passenger-distance">Km da percorrere</label>
+                            <input type="text" name="passenger-distance" id="passenger-distance">    
                         </div>
                     </div>
-                    <div class="col-3">
-                        <div class="box">
+                    <div class="col-10 col-md-3">
                         <div class="form-item text-center">
-                            <label for="user-age">Fascia d'età</label>
-                            <select name="user-age" id="user-age">
+                            <label for="passenger-age">Fascia d'età</label>
+                            <select name="passenger-age" id="passenger">
                                 <option value=""></option>
-                                <option value="minorenne">Minorenne
+                                <option value="Biglietto">Minorenne
                                 </option>
-                                <option value="maggiorenne">Maggiorenne
+                                <option value="Biglietto Standard">Maggiorenne
                                 </option>
-                                <option value="over-65">Over 65</option>
+                                <option value="Biglietto Silver">Over 65</option>
                             </select>
-                        </div>
                         </div>
                     </div>
                 </div>
+                <!-- /Input -->
+
+                <!-- Buttons -->
+                <div class="row mt-5">
+                    <div class="col-6 d-flex text-center justify-content-end">
+                        <button id="genera" class="fw-bold">
+                            Genera
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <button id="annulla" class="fw-bold">
+                            Annulla
+                        </button>
+                    </div>
+                </div>
+                <!-- /Buttons -->
             </form>
+            <!-- Form -->
         </div>
     </nav>
 
     <main>
+        <div class="container">
+            <h2>
+                Il tuo biglietto
+            </h2>
+            <div class="ticket p-4">
+                <h3>
+                    Dettaglio passeggeri
+                </h3>
+                <div class="container-fluid">
+                    <div class="row passenger-ticket lh-1">
+                        <div class="p-4">
+                            <h3>Nome passeggero</h3>
+                            <p id="ticket-name" class="fw-bold"></p>
+                        </div>
+                        <div class="ps-4">
+                            <h5 class="py-4">Offerta</h5>
+                            <p id="ticket-type" class="py-4"></p>
+                        </div>
+                        <div>
+                            <h5 class="py-4">Carrozza</h5>
+                            <p id="ticket-wagon" class="py-4"></p>
+                        </div>
+                        <div>
+                            <h5 class="py-4">Codice CP</h5>
+                            <p id="ticket-cp-code" class="py-4"></p>
+                        </div>
+                        <div>
+                            <h5 class="py-4">Costo biglietto</h5>
+                            <p id="ticket-price" class="py-4"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     
 
